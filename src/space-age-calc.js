@@ -20,11 +20,13 @@ export function userAge(dob) {
   }
 
   userAge.prototype.ageOnMercury = function () {
-    return this.age /(.24);
-    console.log(ageOnMercury);
-    // let mercuryAge = Math.floor(this.ageOnMercury() / .24);
-    // return (mercuryAge);
+    let mercuryAge = this.age / 0.24;
+    return Math.floor(mercuryAge);
   }
+
+  // userAge.prototype.ageOnMercury = function () {
+  //   return this.ageInYears/ 0.24;
+  // }
 
   // userAge.prototype.ageOnVenus = function () {
   //   return this.age / .62;
