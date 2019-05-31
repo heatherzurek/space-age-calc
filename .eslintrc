@@ -8,10 +8,10 @@
       "es6": true,
       "browser": true,
       "jquery": true,
-      "jasmine": true,
-      "node": true
+       "node": true,
+       "jasmine": true
     },
-  "rules": {
+   "rules": {
       "semi": 1,
       "indent": ["warn", 2],
       "no-console": "warn",
