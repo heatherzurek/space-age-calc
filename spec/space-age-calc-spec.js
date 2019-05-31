@@ -8,11 +8,11 @@ describe('userAge', function() {
     expect(Math.floor(earthAge)).not.toEqual(34);
   });
 
-  it('should return the date of birth in mercury years', function() {
-    let mercuryAge = new userAge("08-06-1987").ageOnMercury();
-
-    expect(Math.floor(mercuryAge)).toEqual(133);
-  })
+  // it('should return the date of birth in mercury years', function() {
+  //   let mercuryAge = new userAge("08-06-1987").ageOnMercury();
+  //
+  //   expect(Math.floor(mercuryAge)).toEqual(133);
+  // })
 
   // it('should return date of birth in mercury years', function() {
   //   let mercuryAge = new userAge("02-13-1990").ageOnMercury();
