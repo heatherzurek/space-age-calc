@@ -1,9 +1,11 @@
-import { ageCalculator } from './../src/space-age-calc.js';
+import { AgeCalculator } from './../src/space-age-calc.js';
 
 describe('ageCalculator', function() {
 
-  it('should take age and convert into seconds', function() {
-  let ageCalc = new ageCalculator(29);
-  expect(ageCalc.dateToSeconds()).toEqual(914544000);
-  });
+  it('should output the persons age' , function() {
+     let birthdate = new AgeCalculator(new Date('February 13, 1990'));
+      expect(age.GetEarthAge()).toEqual(120);
+      age = new AgeCalculator(new Date('January 31, 1995'));
+      expect(age.GetMercuryAge()).toEqual(34);
+   });
 });

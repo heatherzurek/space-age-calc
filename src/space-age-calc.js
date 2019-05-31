@@ -1,18 +1,16 @@
-export class ageCalculator {
-  constructor(year, birthdate) {
-    this.year = year;
-    // this.month = month;
-    // this.day = day;
+export class Age {
+  constructor(birthdate) {
     this.birthdate = birthdate;
-    this.dateToSeconds = 2239056000;
-    this.avgLifeExpect = 71;
   }
 
-  dateToSeconds() {
-    let howManySeconds = (((this.year * 365)*24)*60)*60;
-    return howManySeconds;
+  function getAge(dateString) {
+      let today = new Date();
+      let birthdate = new Date(dateString);
+      let age = today.getFullYear() - birthdate.getFullYear();
+      let m = today.getMonth() - birthdate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
+          age--;
+      }
+      return age;
   }
 }
-
-//average us life expectancy is 78
-//worldwife average life expectancy is 71
