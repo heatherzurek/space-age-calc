@@ -1,16 +1,11 @@
 export class Age {
-  constructor(birthdate) {
-    this.birthdate = birthdate;
+  constructor(years) {
+    this.years = years;
   }
 
-  function getAge(dateString) {
-      let today = new Date();
-      let birthdate = new Date(dateString);
-      let age = today.getFullYear() - birthdate.getFullYear();
-      let m = today.getMonth() - birthdate.getMonth();
-      if (m < 0 || (m === 0 && today.getDate() < birthdate.getDate())) {
-          age--;
-      }
-      return age;
+  earthAgeInDays(){
+    let years = new Date();
+    const EarthAge = years.getFullYear() - this.years;
+    return EarthAge * 365;
   }
 }
