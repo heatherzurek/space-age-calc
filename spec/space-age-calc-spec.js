@@ -1,8 +1,11 @@
-import { Age } from './../src/space-agr-calc.js';
+import { Age, calculateAge } from './../src/space-age-calc.js';
 
 describe('Age', function() {
-  it('shoud return earth age in days', function() {
-    let testAge = new Age("1990");
-    expect(testAge.earthAgeInDays()).toEqual(10950);
+
+  it('should find age in Earth years based on inputted birth date' , function() {
+    let birthdate = new Age(new Date('Feb 13, 1990'));
+    expect(birthdate.calculateAge()).toEqual(29);
+    birthdate = new Age(new Date('August 06, 1987'));
+    expect(birthdate.calculateAge()).not.toEqual(34);
   });
 });
