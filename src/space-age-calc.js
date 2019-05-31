@@ -1,27 +1,53 @@
 //get users date of birth as input
-class Age {
-  constructor(dob) {
-    this.dob = new Date(dob);
-    //get current date
-    this.now = new Date();
-    this.age = Math.abs(this.now - this.dob);
-  }
+// class userAge {
+//   constructor(dob) {
+//     this.dob = new Date(dob);
+//     //get current date
+//     this.today = new Date();
+//     this.age = Math.abs(this.today - this.dob);
+//   }
+
+//why didnt my class work?
+
+export function userAge(dob) {
+  this.dob = new Date(dob);
+  this.today = new Date();
+  this.age = Math.abs(this.today - this.dob);
+}
   //find their age in years
-  findAgeInYears() {
+  userAge.prototype.ageInYears = function () {
     return this.age/(365*24*60*60*1000);
-  }
-  //divide their age by mercury years
-  // 
-  // mercuryAge() {
-  //   let mercuryAge = Math.floor(this.findAgeInYears() / .24);
+  };
+
+  userAge.prototype.ageOnMercury = function () {
+    let mercuryAge = Math.floor(this.ageOnMercury() / .24);
+    return (mercuryAge);
+  };
+
+  // ageOnMercury() {
+  //   let mercuryAge = Math.floor(this.ageInYears() / .24);
   //   return (mercuryAge);
   // }
-}
+  //
+  //divide their age by venus years
+  // ageOnVenus() {
+  //   let venusAge = Math.floor(this.ageInYears() / .62);
+  //   return (venusAge);
+  // }
+  //
+  //divide their age by mars years
+  // ageOnMars() {
+  //   let marsAge = Math.floor(this.ageInYears() / 1.88);
+  //   return (marsAge);
+  // }
+  //
+  // ageOnJupiter() {
+  //divide their age by Jupiter years
+  //   let jupiterAge = Math.floor(this.ageInYears() / 11.86);
+  //   return (jupiterAge);
+  // }
 
-module.exports = Age;
+  // module.exports = userAge
 
-//divide their age by venus years
-//divide their age by mars years
-//divide their age by Jupiter years
 //calculate users life expectancy
 //return number of years theyve lived past their life expectancy
