@@ -1,13 +1,4 @@
 body {
   background-color: lightblue;
   color: #FFFFFF;
-  text-align: center;
-}
-
-h1 {
-font-size: 82px;
-font-weight: bold;
-background: -webkit-linear-gradient(#283c86, #45a247);
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
 }

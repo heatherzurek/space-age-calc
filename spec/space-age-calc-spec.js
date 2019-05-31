@@ -1,11 +1,10 @@
-import { CalculateAge } from '/../src/space-age-calc.js';
+import { Age } from './../src/space-age-calc.js';
 
-describe('CalculateAge', function() {
+describe('Age', function() {
 
-  it('should find age in Earth years based on inputted birth date' , function() {
-    let birthdate = new CalculateAge(new Date('Feb 13, 1990'));
-    expect(birthdate.CalculateAge()).toEqual(29);
-    birthdate = new CalculateAge(new Date('August 06, 1987'));
-    expect(birthdate.CalculateAge()).not.toEqual(34);
+  it('should return uses date of birth in years', function() {
+    let earthAge = new Age("02-13-1990").findAgeInYears();
+    expect(Math.floor(earthAge)).toEqual(29);
+    expect(Math.floor(earthAge)).not.toEqual(34);
   });
 });
