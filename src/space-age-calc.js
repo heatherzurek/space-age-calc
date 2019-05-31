@@ -12,18 +12,25 @@
 export function userAge(dob) {
   this.dob = new Date(dob);
   this.today = new Date();
-  this.age = Math.abs(this.today - this.dob);
+  this.age = Math.floor(this.today - this.dob);
 }
   //find their age in years
   userAge.prototype.ageInYears = function () {
     return this.age/(365*24*60*60*1000);
-  };
+  }
 
   userAge.prototype.ageOnMercury = function () {
-    let mercuryAge = Math.floor(this.ageOnMercury() / .24);
-    return (mercuryAge);
-  };
+    return this.age /(.24);
+    console.log(ageOnMercury);
+    // let mercuryAge = Math.floor(this.ageOnMercury() / .24);
+    // return (mercuryAge);
+  }
 
+  // userAge.prototype.ageOnVenus = function () {
+  //   return this.age / .62;
+  // }
+
+  //this is what i was using with my object
   // ageOnMercury() {
   //   let mercuryAge = Math.floor(this.ageInYears() / .24);
   //   return (mercuryAge);
