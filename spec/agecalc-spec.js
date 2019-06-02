@@ -20,4 +20,13 @@ describe('ageCalc', function() {
     expect(mercuryAge).not.toEqual(99);
   });
 
+  it('should test users correct age on venus', function() {
+    let testDate = new ageCalc(new Date(1990, 2, 13));
+    let dob = testDate.birthday;
+    let venusAge = testDate.ageOnVenus(dob);
+
+    expect(venusAge).toEqual(46);
+    expect(venusAge).not.toEqual(66);
+  });
+
 });
