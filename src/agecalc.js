@@ -32,6 +32,12 @@ class ageCalc {
     return marsAge
   }
 
+  ageOnJupiter() {
+    let age = this.ageOnEarth();
+    let jupiterAge = Math.floor(age / 11.86);
+    return jupiterAge;
+  }
+
 
   // jupiter 11.86
 

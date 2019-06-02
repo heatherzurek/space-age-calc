@@ -38,4 +38,13 @@ describe('ageCalc', function() {
     expect(marsAge).not.toEqual(51);
   })
 
+  it('should test users correct age on mars', function() {
+    let testDate = new ageCalc(new Date(1990, 2, 13));
+    let dob = testDate.birthday;
+    let jupiterAge = testDate.ageOnJupiter(dob);
+
+    expect(jupiterAge).toEqual(2);
+    expect(jupiterAge).not.toEqual(34);
+  })
+
 });
