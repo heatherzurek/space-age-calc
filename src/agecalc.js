@@ -39,6 +39,7 @@ class ageCalc {
   }
 
 
+  //avg us life expect 78
   // jupiter 11.86
 
 }
